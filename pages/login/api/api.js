@@ -1,5 +1,6 @@
-import request from "../../../http/http"
+import request from "../../../http/http";
 //get示例
+let params = {};
 export const testGet = request("testUrl", params);
 //post示例
-export const testGet = request("testUrl", params, "post");
+// export const testGet = request("testUrl", params, "post");

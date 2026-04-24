@@ -9829,12 +9829,15 @@ var utils = {
         duration: duration
       });
     },
-    // 页面切换，url-页面绝对路径，jumpType-跳转方式，routerParams-跳转携带的参数
+    // 页面切换，url-页面绝对路径，jumpType-跳转方式，jump_params-跳转携带的参数
     uniChangePage: function uniChangePage(jump_url) {
       var jump_params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
       var jump_type = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "navigateTo";
       var _checkRouterParams = new _class.checkRouterParams(jump_url, jump_params, jump_type),
         url = _checkRouterParams.url;
+      console.log(url, 'url');
+      console.log(jump_params, 'jump_params');
+      console.log(jump_type, 'jump_type');
       var routerChange = {
         navigateTo: function navigateTo() {
           return uni.navigateTo({
@@ -11462,23 +11465,7 @@ module.exports = index_cjs;
 /* 41 */,
 /* 42 */,
 /* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */,
-/* 58 */,
-/* 59 */,
-/* 60 */
+/* 44 */
 /*!************************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/@babel/runtime/regenerator/index.js ***!
   \************************************************************************************************/
@@ -11487,11 +11474,11 @@ module.exports = index_cjs;
 
 // TODO(Babel 8): Remove this file.
 
-var runtime = __webpack_require__(/*! @babel/runtime/helpers/regeneratorRuntime */ 61)();
+var runtime = __webpack_require__(/*! @babel/runtime/helpers/regeneratorRuntime */ 45)();
 module.exports = runtime;
 
 /***/ }),
-/* 61 */
+/* 45 */
 /*!*******************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/regeneratorRuntime.js ***!
   \*******************************************************************/
@@ -11812,7 +11799,7 @@ function _regeneratorRuntime() {
 module.exports = _regeneratorRuntime, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
-/* 62 */
+/* 46 */
 /*!*****************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/asyncToGenerator.js ***!
   \*****************************************************************/

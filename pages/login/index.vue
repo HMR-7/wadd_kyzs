@@ -4,9 +4,7 @@
     <view class="logo">
       <image src="../../static/images/logo.png" />
     </view>
-    <view @tap="testLink()">
-      跳转测试
-    </view>
+    <view @tap="testLink()"> 跳转测试 </view>
     <!-- 手机登录 -->
     <view class="form">
       <!-- 手机号 -->
@@ -21,9 +19,7 @@
         <view class="code-left-icon"></view>
       </view>
       <!-- 登录按钮 -->
-      <view class="form-login-btn">
-        手机验证登录
-      </view>
+      <view class="form-login-btn"> 手机验证登录 </view>
     </view>
     <!-- 微信快捷登录 -->
     <button
@@ -52,8 +48,8 @@ export default {
   data() {
     return {
       params: {
-        js_code: ""
-      }
+        js_code: "",
+      },
     };
   },
   onShow() {},
@@ -61,6 +57,12 @@ export default {
     this.getJs_code();
   },
   methods: {
+    async testLink() {
+      let t = this,
+        { uniChangePage, uniToast } = { ...t.$u.uniFuncs };
+      uniChangePage("/pages/index/index", {}, "switchTab");
+      uniToast("跳转成功");
+    },
     async getJs_code() {
       let t = this,
         { uniLogin } = { ...t.$u.uniFuncs };
@@ -71,9 +73,12 @@ export default {
         { uniToast } = { ...t.$u.uniFuncs },
         detail = e.detail,
         params = t.params;
+      console.log(e, "eeeeeeeeeeeee");
+      console.log(detail, "detail");
+      console.log(params, "params");
       if (detail.userInfo) {
         params.encryptedData = detail.encryptedData;
-        params.iv = detail.iv;	
+        params.iv = detail.iv;
         t.toLogin(params);
       } else if (detail.errMsg === "getUserInfo:fail auth deny") {
         t.getJs_code();
@@ -81,25 +86,26 @@ export default {
       }
     },
     async toLogin(params) {
+      console.log(params, "params");
       let t = this,
         { uniToast, uniChangePage } = { ...t.$u.uniFuncs };
       try {
         // let { code, data, msg } = await userLogin(params);
         // const userInfo = data.data;
         // uni.setStorageSync("userInfo", userInfo);
-        uniToast("登陆成功");
+        uniToast("登录成功");
         setTimeout(() => {
-          uniChangePage("/pages/index/index", "switchTab");
+          uniChangePage("/pages/index/index", {}, "switchTab");
         }, 600);
       } catch (err) {
         console.warn(`err${err}`);
         t.getJs_code();
       }
-    }
-  }
+    },
+  },
 };
 </script>
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .Login {
   padding-top: 20%;
   display: flex;

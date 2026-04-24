@@ -102,11 +102,14 @@ const utils = {
                 duration,
             })
         },
-        // 页面切换，url-页面绝对路径，jumpType-跳转方式，routerParams-跳转携带的参数
+        // 页面切换，url-页面绝对路径，jumpType-跳转方式，jump_params-跳转携带的参数
         uniChangePage(jump_url, jump_params = {}, jump_type = "navigateTo", ) {
             const {
                 url
             } = new checkRouterParams(jump_url, jump_params, jump_type);
+            console.log(url, 'url');
+            console.log(jump_params, 'jump_params');
+            console.log(jump_type, 'jump_type');
             const routerChange = {
                 navigateTo: function () {
                     return uni.navigateTo({
