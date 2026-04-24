@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* 主体色 */
+.swiper.data-v-4995ad73 {
+  width: 100%;
+  height: 100%;
+}
+.swiper .swiperItem.data-v-4995ad73 {
+  width: 100%;
+  height: 100%;
+}
+.swiper .swiperItem image.data-v-4995ad73 {
+  width: 100%;
+  height: 100%;
+}

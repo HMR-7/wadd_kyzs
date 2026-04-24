@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* 主体色 */
+.content.data-v-a60ae070 {
+  width: 100%;
+  height: 1200rpx;
+  border: 1rpx solid red;
+  box-sizing: border-box;
+}
+.content .canvas_show.data-v-a60ae070 {
+  width: 100%;
+  height: 100%;
+}

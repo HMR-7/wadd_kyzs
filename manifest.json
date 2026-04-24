@@ -1,6 +1,6 @@
 {
-    "name" : "wadd_kyzs",
-    "appid" : "",
+    "name" : "wxapp_axios",
+    "appid" : "wxfaae6a06b85773b1",
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : "100",
@@ -8,7 +8,7 @@
     /* 5+App特有相关 */
     "app-plus" : {
         "usingComponents" : true,
-        "nvueStyleCompiler" : "uni-app",
+        "nvueCompiler" : "uni-app",
         "compilerVersion" : 3,
         "splashscreen" : {
             "alwaysShowBeforeRender" : true,
@@ -16,6 +16,13 @@
             "autoclose" : true,
             "delay" : 0
         },
+        "safearea" : {
+            "bottom" : {
+                "offset" : "none"
+            }
+        },
+        //全面屏手机适配
+        //需要的地方加上-padding-bottom: env(safe-area-inset-bottom);
         /* 模块配置 */
         "modules" : {},
         /* 应用发布信息 */
@@ -50,9 +57,15 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "",
+        "appid" : "wx4e740748bfb8fd79",
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "你的位置信息将用于小程序位置接口的效果展示" // 高速公路行驶持续后台定位
+            }
+        },
         "setting" : {
-            "urlCheck" : false
+            "urlCheck" : false,
+            "es6" : true
         },
         "usingComponents" : true
     },
@@ -67,6 +80,5 @@
     },
     "uniStatistics" : {
         "enable" : false
-    },
-    "vueVersion" : "3"
+    }
 }
