@@ -1,1 +1,0 @@
-<view class="content data-v-4bd6864f"><view class="header data-v-4bd6864f"></view><view class="container data-v-4bd6864f"></view><view data-event-opts="{{[['tap',[['toLogin',['$event']]]]]}}" style="text-align:center;" catchtap="__e" class="data-v-4bd6864f">登录页</view></view>
